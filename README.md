@@ -6,6 +6,12 @@ To appear at AIES 2024.
 
 <!--- [[Paper](https://arxiv.org/abs/2309.05148)] --->
 
+## Requirements
+Package requirements to run this project are listed in the [environment.yml](./environment.yml) file. To install all requirements:
+```
+conda env create -f environment.yml
+```
+
 ## Datasets
 
 ## Experiments
