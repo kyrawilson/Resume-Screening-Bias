@@ -1,5 +1,11 @@
 # Resume-Screening-Bias
 
+**Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval**  
+Kyra Wilson and Aylin Caliskan  
+To appear at AIES 2024.
+
+<!--- [[Paper](https://arxiv.org/abs/2309.05148)] --->
+
 ## Datasets
 
 ## Experiments
