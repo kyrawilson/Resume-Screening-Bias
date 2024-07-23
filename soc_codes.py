@@ -8,8 +8,11 @@ import gc
 from time import sleep
 import urllib3
 
+auth_token = ''
+user = ''
+
 headers = { 'User-Agent': 'python-OnetWebService/1.00 (bot)',
-            'Authorization': 'Basic ' + base64.standard_b64encode(('washington' + ':' + '2694emu').encode()).decode(),
+            'Authorization': 'Basic ' + base64.standard_b64encode((f'{user}').encode()).decode(),
             'Accept': 'application/json' }
 url_root = 'https://services.onetcenter.org/ws/online/search?keyword='
 
@@ -31,7 +34,7 @@ for i in range(start_index, len(titles)):
     print(i)
     t = titles[i]
     t = t.replace(' ', '%20')
-    r = requests.get(url_root + t, headers={'Authorization': 'Basic d2FzaGluZ3RvbjoyNjk0ZW11', 'Accept': 'application/json'})
+    r = requests.get(url_root + t, headers={'Authorization': f'{auth_token}', 'Accept': 'application/json'})
     while True:
         try:
             h = r.json()['occupation'][0]
