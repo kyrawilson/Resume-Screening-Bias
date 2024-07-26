@@ -18,7 +18,7 @@ Resumes can be downloaded [here](https://www.kaggle.com/datasets/snehaanbhawal/r
 ## Preprocessing
 Generate SOC occupation codes for resumes and job descriptions using NIOCCS [here](https://csams.cdc.gov/nioccs/).
 
-## Experiments
+## Embedding Creation
 Use [embeddings.py](./embeddings.py) to generate embeddings for resumes and job descriptions. For resumes two text files are needed: one file with a single name on a single line to add to all resumes, and one file with one resume per line. For job descriptions two text files are needed: one file with a single task instruction on a single line, and one file with one job description per line.
 
 ```
@@ -38,7 +38,23 @@ Optional arguments:
 python embeddings.py -t task_instruction.txt -q descriptions.txt -o description_embeddings.pkl
 
 #Running the script for resumes
-python LLM_retrieval.py -p name.txt -d resumes.txt -o resume_embeddings.pkl
+python embeddings.py -p name.txt -d resumes.txt -o resume_embeddings.pkl
+```
+
+## Retrieval
+Use retrieval.py to calculate the cosine similarities between embeddings of job descriptions and resumes. All resume embeddings should be contained in a single directory, and all job description embeddings should be in a single, separate directory. Two .csv files are also needed, where the first column 'description' is the resumes or job description text files used in the embedding generation, and the second column 'broad_occupation' is the SOC codes corresponding to the text in the first column.
+
+```
+python retrieval.py --help
+Required arguments:
+-q    --queries    Path to job description embeddings directory     default=None
+-d    --documents  Path to resume embeddings directory              default=None
+-j    --jobs       Path to job description metadata                 default=None
+-r    --resumes    Path to resume metadata                          default=None
+
+
+#Calculate cosine similarities for job descriptions and resumes. 
+python retrieval.py -q description_embeddings -d resume_embeddings -j job_descriptions.csv -r resumes.csv
 ```
 
 ## Citation
