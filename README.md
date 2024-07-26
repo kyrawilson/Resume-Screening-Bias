@@ -42,7 +42,7 @@ python embeddings.py -p name.txt -d resumes.txt -o resume_embeddings.pkl
 ```
 
 ## Retrieval
-Use retrieval.py to calculate the cosine similarities between embeddings of job descriptions and resumes. All resume embeddings should be contained in a single directory, and all job description embeddings should be in a single, separate directory. Two .csv files are also needed, where the first column 'description' is the resumes or job description text files used in the embedding generation, and the second column 'broad_occupation' is the SOC codes corresponding to the text in the first column.
+Use [retrieval.py](./retrieval.py) to calculate the cosine similarities between embeddings of job descriptions and resumes. All resume embeddings should be contained in a single directory, and all job description embeddings should be in a single, separate directory. Two .csv files are also needed, where the first column 'description' is the resumes or job description text files used in the embedding generation, and the second column 'broad_occupation' is the SOC codes corresponding to the text in the first column.
 
 ```
 python retrieval.py --help
@@ -56,6 +56,12 @@ Required arguments:
 #Calculate cosine similarities for job descriptions and resumes. 
 python retrieval.py -q description_embeddings -d resume_embeddings -j job_descriptions.csv -r resumes.csv
 ```
+
+## Experiments
+
+Use experiments.py to analyze retrieval scores. You will need a .csv file with names and social identities, formatted like names.csv.
+
+_To be continued..._
 
 ## Citation
 
