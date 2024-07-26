@@ -15,6 +15,9 @@ conda env create -f environment.yml
 ## Datasets
 Resumes can be downloaded [here](https://www.kaggle.com/datasets/snehaanbhawal/resume-dataset) and job descriptions can be downloaded [here](https://www.kaggle.com/datasets/marcocavaco/scraped-job-descriptions).
 
+## Preprocessing
+Generate SOC occupation codes for job descriptions and resumes using NIOCCS [here](https://csams.cdc.gov/nioccs/).
+
 ## Experiments
 
 ## Citation
