@@ -77,6 +77,8 @@ python experiments.py -n names.csv -l 1300
 ## Citation
 
 If you find this repository useful for your research, please consider citing our preprint:
+
+```
 @misc{wilson2024genderraceintersectionalbias,
       title={Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval}, 
       author={Kyra Wilson and Aylin Caliskan},
@@ -86,3 +88,4 @@ If you find this repository useful for your research, please consider citing our
       primaryClass={cs.CY},
       url={https://arxiv.org/abs/2407.20371}, 
 }
+```
