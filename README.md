@@ -59,9 +59,20 @@ python retrieval.py -q description_embeddings -d resume_embeddings -j job_descri
 
 ## Experiments
 
-Use experiments.py to analyze retrieval scores. You will need a .csv file with names and social identities, formatted like names.csv.
+Use experiments.py to analyze retrieval scores. To reproduce the results from our paper, download the retrieval scores [here](https://osf.io/cbx2d/). The script can also be used to generate new results by replacing the appropriate files with new names/scores. 
 
-_This section and associated code is still in progress (8/26/2024)._
+```
+python experiments.py --help
+Required arguments:
+-m    --model    Name of HuggingFace model to use (if not specified all used)     default=None
+-n    --names    Path to .csv file with names and attributes                      default=None
+-l    --length   Length of tokens used to generate model embeddings               default=None
+-c    --collapse G for gender, R for race, not specified for intersectional       default=None
+
+
+#Calculate cosine similarities for job descriptions and resumes. 
+python experiments.py -n names.csv -l 1300
+```
 
 ## Citation
 
