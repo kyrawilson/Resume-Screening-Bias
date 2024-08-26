@@ -323,11 +323,11 @@ def load_dfs(model, length):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Playground for LLM similarity-based retrieval')
-    parser.add_argument('-m','--model', type=str, help='Name of HuggingFace model to use', default='')
+    parser.add_argument('-m','--model', type=str, help='Name of HuggingFace model to use (if not specified all used)', default='')
     parser.add_argument('-n','--names', type=str, help='Path to file of names and social groups', default='')
     parser.add_argument('-l','--length', type=str, help='Length of tokens used to generate model embeddings', default='')
     parser.add_argument('-c','--collapse', type=str, 
-                        help='Whether to collapse groups for analysis (either G or R)', default='', required=False)
+                        help='G for gender, R for race, not specified for intersectional', default='', required=False)
     args = vars(parser.parse_args())
     model = args['model']
     length = args['length']
