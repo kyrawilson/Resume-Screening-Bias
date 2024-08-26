@@ -59,7 +59,7 @@ python retrieval.py -q description_embeddings -d resume_embeddings -j job_descri
 
 ## Experiments
 
-Use experiments.py to analyze retrieval scores. To reproduce the results from our paper, download the retrieval scores [here](https://osf.io/cbx2d/). The script can also be used to generate new results by replacing the appropriate files with new names/scores. 
+Use [experiments.py](./experiments.py) to analyze retrieval scores. To reproduce the results from our paper, download the retrieval scores [here](https://osf.io/cbx2d/). The script can also be used to generate new results by replacing the appropriate files with new names/scores. 
 
 ```
 python experiments.py --help
