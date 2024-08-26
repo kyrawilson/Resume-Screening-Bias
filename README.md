@@ -61,7 +61,7 @@ python retrieval.py -q description_embeddings -d resume_embeddings -j job_descri
 
 Use experiments.py to analyze retrieval scores. You will need a .csv file with names and social identities, formatted like names.csv.
 
-_To be continued..._
+_This section and associated code is still in progress (8/26/2024)._
 
 ## Citation
 
