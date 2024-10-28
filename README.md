@@ -2,7 +2,7 @@
 
 **Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval**  
 Kyra Wilson and Aylin Caliskan  
-Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society (2024)
+Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society (2024) 
 The paper can be viewed [here](https://ojs.aaai.org/index.php/AIES/article/view/31748).
 
 ## Requirements
