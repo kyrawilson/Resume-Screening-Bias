@@ -1,5 +1,18 @@
 # Resume-Screening-Bias
 
+
+```diff
+- Update August 29, 2026
+After attempting to replicate our study, Frank Pallas (frank.pallas@plus.ac.at, Salzburg University) and Martin Wiesinger (martin.wiesinger@plus.ac.at, Salzburg University) informed us that our published results are inaccurate due to a bug in our code. Specifically, the results of **gender-only** comparisons should be inverted, such that measurements referring to the preference of men should actually refer to preference of women, and vice versa. The results for race-only and all the intersectional gender by race comparisons are accurate and were replicated by the Salzburg University team. We are grateful to them for bringing this error to our attention.
+
+We **HAVE NOT** corrected the copy of the code in this repo for traceability, however if you wish to alter a local copy, modify lines 38-39 in experiments.py to read as follows:
+
+names['F'] = names['WF']+names['BF']
+names['M'] = names['WF']+names['BM']
+```
+
+
+
 **Gender, Race, and Intersectional Bias in Resume Screening via Language Model Retrieval**  
 Kyra Wilson and Aylin Caliskan  
 Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society (2024) 
